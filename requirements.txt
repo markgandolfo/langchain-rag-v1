@@ -1,4 +1,6 @@
 langchain
+langchain_community
+unstructured
 ollama
 faiss-cpu
 sentence-transformers
