@@ -32,6 +32,8 @@ embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 # Create embeddings for each chunk
 embeddings = [embedding_model.encode(chunk.page_content) for chunk in chunks]
 
+print(f"{YELLOW}Number of embeddings created: {len(embeddings)}{END}")
+
 # Step 3: Store Embeddings in a Vector Store
 # Create a FAISS index
 dimension = embeddings[0].shape[0]
